@@ -13,6 +13,6 @@ DevOps Deploy WordPress with Amazon RDS and install MySQL
 
 To enable icons, you can pass `&show_icons=true` in the query param, like so:
 
-```md
+
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=anuraghazra&show_icons=true)
-```
+
