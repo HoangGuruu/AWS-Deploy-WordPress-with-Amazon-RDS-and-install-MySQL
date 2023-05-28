@@ -1,21 +1,14 @@
-# DevOps-Deploy-WordPress-with-Amazon-RDS-and-install-MySQL
+# 1. DevOps-Deploy-WordPress-with-Amazon-RDS-and-install-MySQL
 ![image](https://github.com/HoangGuruu/AWS-Deploy-WordPress-with-Amazon-RDS-and-install-MySQL/assets/111829092/f7a97342-c67f-4ccb-853c-9037e9d4ea6e)
-# Link Youtube
+# 2. Link Youtube
 
-# The necessary links for the project
-
-## Link Hands-on AWS for this project - However it's not use ubuntu - So i will use Ubuntu for this project
+# 3. The necessary links for the project
+### Link Hands-on AWS for this project - However it's not use ubuntu - So i will use Ubuntu for this project
 https://aws.amazon.com/getting-started/hands-on/deploy-wordpress-with-amazon-rds/
-
-## Install Apache by Ubuntu
+### Install Apache by Ubuntu
 https://ubuntu.com/server/docs/web-servers-apache
-
-## Install Wordpress by Ubuntu
-
-## Install MySQL server
+### Install MySQL server
 https://ubuntu.com/server/docs/databases-mysql
-
-
 
 All the commands that are executed in the above youtube video are mentioned in this gist. 
 
