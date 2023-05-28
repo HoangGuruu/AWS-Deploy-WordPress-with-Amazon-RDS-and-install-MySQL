@@ -13,21 +13,21 @@ https://ubuntu.com/server/docs/databases-mysql
 All the commands that are executed in the above youtube video are mentioned in this gist. 
 
 1. Install Apache server on Ubuntu
-'''
+```
 sudo apt install apache2
-'''
+```
 2. Install php runtime and php mysql connector
-'''
+
 sudo apt install php libapache2-mod-php php-mysql
-'''
+
 3. Install MySQL server
-'''
+
 sudo apt install mysql-server 
-'''
+
 4. Login to MySQL server
-'''
+
 sudo mysql -u root
-'''
+
 5. Change authentication plugin to mysql_native_password (change the password to something strong)
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by 'Testpassword@123';
 
