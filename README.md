@@ -9,7 +9,8 @@ https://aws.amazon.com/getting-started/hands-on/deploy-wordpress-with-amazon-rds
 https://ubuntu.com/server/docs/web-servers-apache
 ### Install MySQL server
 https://ubuntu.com/server/docs/databases-mysql
-
+### Install and configure WordPress
+https://ubuntu.com/tutorials/install-and-configure-wordpress#1-overview
 All the commands that are executed in the above youtube video are mentioned in this gist. 
 
 1. Install Apache server on Ubuntu
