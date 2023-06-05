@@ -7,11 +7,21 @@
 https://aws.amazon.com/getting-started/hands-on/deploy-wordpress-with-amazon-rds/
 ### Install Apache by Ubuntu
 https://ubuntu.com/server/docs/web-servers-apache
+### Install PHP Ubuntu
+https://ubuntu.com/server/docs/programming-php
 ### Install MySQL server
 https://ubuntu.com/server/docs/databases-mysql
 ### Install and configure WordPress
 https://ubuntu.com/tutorials/install-and-configure-wordpress#1-overview
-All the commands that are executed in the above youtube video are mentioned in this gist. 
+### How To Secure Apache with Let's Encrypt on Ubuntu 20.04
+https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-20-04
+
+### All the commands that are executed in the above youtube video are mentioned in this gist. 
+
+#### Note :
+- Allow MySQL with security group EC2
+- Have a Domain
+- - Find script in tutorial of web
 
 1. Install Apache server on Ubuntu
 ```
@@ -53,10 +63,34 @@ wget https://wordpress.org/latest.tar.gz
 10. Unzip
 ```
 tar -xvf latest.tar.gz
+# or
+unzip latest.tar.gz
 ```
 11. Move wordpress folder to apache document root
 ```
 sudo mv wordpress/ /var/www/html
+```
+
+### Then check public ip/wordpress 
+- Let's go
+ Database Name wp
+ Username wp_user
+ Password Testpassword@123
+ Database Host localhost
+ Table Prefix wp_
+
+- Copy and create a wp-config.php with this script
+- Run installation
+- And fill the blank with your information
+
+### If you want to use wordpress as Main Page
+```
+cd /etc/apache2/sites-available/
+sudo nano 000-default.conf
+```
+#### Change
+```
+DocumentRoot /var/www/html/wordpress
 ```
 12. Command to restart/reload apache server
 ```
@@ -64,6 +98,29 @@ sudo systemctl restart apache2
 OR
 sudo systemctl reload apache2
 ```
+### If you want to use your domain
+```
+cd /etc/apache2/sites-available/
+sudo nano 000-default.conf
+```
+#### Ignore
+```
+DocumentRoot /var/www/html/wordpress
+```
+#### Add
+```
+# mysamplewebsite.online this is domain
+ServerName mysamplewebsite.online
+ServerAlias www.mysamplewebsite.online
+```
+#### Then
+```
+sudo systemctl restart apache2
+OR
+sudo systemctl reload apache2
+```
+
+### Then we got ip/wp-admin -> Sign in -> Setting -> General Settings -> Change domain
 13. Install certbot
 ```
 sudo apt-get update
